@@ -1,0 +1,307 @@
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    /*
+    Mathematical operators :
+    [+] addition
+    [-] subtraction
+    [*] multiplication
+    [/] division
+    [%] modulus (remainder of division)
+    [**] exponentation
+    [++] increment (increases by 1)
+    [--] decrement (decreases by 1)
+
+    */
+    // conacatenate = join together.
+
+    // x.length returns length of string, x is variable name
+
+    // x.indexOf("y") returns first occurence of text y, x is variable. lastIndexOF returns last occurence.
+
+    // both return -1 if string not found  
+
+    // x.search("y") returns position of text y, x is variable.
+    
+    /* 
+    x.slice(a, b) extracts part of string from index position a to b
+    in x.slice(a, b) b is not included, x is variable
+    if b not specified, string from position a is extracted
+    */
+
+    /*
+    x.substr(a, b) extracts part of string. a is starting index position, b is length of extracted part.
+    if b not specified, string from position a is extracted
+    */
+
+    /*
+    replace first occurence of x with z in string y using y.replace(x, z)
+    
+    Case sensitive by default, make case insensitive using y.replace(/x/i, z)
+    
+    replace all matches for x with z in string y, using y.replace(/x/g, "z") 
+    */
+
+    /*
+    extract character from string using x.charAt(y), x is varible, y is index position of y
+    Ex. 
+    str1 = "You suck"
+    str1.charAt(2) -> u
+
+    extract unicode of character at index position y in string x using x.charCodeAt(y) 
+    */
+
+    // convert string x to uppercase or lowercase using x.toUpperCase() or x.toLowerCase()
+    
+    // JS comparisons : [greater/less than >,<] [greater/less or equal >=,<=] 
+
+    // JS equality checks : [equals ==] [not equal !=]
+
+    // comparisons convert null to a number [0] 
+    
+    // Comaparisons return boolean values : true or false
+    
+    /* String comparison : 
+    1. Compare first character, if different then comparison done.
+    2. If first equal, compare following characters until one pair is different.
+    3. If strings have same characters and length, they are equal.    */
+    
+    // While comparing different types of values, JS converts strings to numbers.
+    
+    // for boolean values, [true == 1] [false == 0]
+    
+    // empty strings become 0 
+    
+    /* Strict equality operator [===] also differentiates between diff types of values
+    [strings and numbers]  while equality operator [==] converts strings to numbers 
+    
+    Strict non-equality operator [!==]  */
+    
+    /* null becomes 0, undefined becomes NaN 
+       without any comnversions, they equal each other and nothing else */
+
+    // Undefined should not be compared to anything
+    
+ /* || -> OR operator 
+    Returns true if any value is true, false if all are false.
+    Used to test if any given condition is true. 
+ */
+
+ // chain of || used with multiple conditions returns first truthy value or last value if none are truthy
+ 
+ /* Short-circuit evaluation : || only processes arguments till first truthy value is reached, 
+    and returns the truthy value.
+ */
+
+ /* && -> AND operator
+    Returns true only if both values are true, else returns false  
+1] let x = 10
+let y = 15
+console.log(alert(x < 20 && y < 20)) 
+Output : True
+
+2] let x = 10
+let y = 15
+console.log(alert(x < 20 && y < 15))
+Output : false {second condition is false}
+
+3]  let x = 10
+let y = 15
+console.log(alert(x < 10 && y < 15))
+OUtput : false {both conditions false}
+*/
+
+// using && with multiple values returns first falsy value, or last value if all are truthy. 
+
+/* ! -> NOT operator 
+   Converts operand to boolean and returns inverse value
+   Example : 
+   1] alert( !true)
+   output : false 
+   2] alert( !false)
+   output : true
+*/
+
+/* !! converts operand to boolean value.
+   First ! converts value to boolean and inverses, Second ! inverses again,
+   result -> Plain to boolean conversion 
+*/
+
+// Order of precedence of logical operators : ! > && > ||
+
+/* Basic if...else syntax :
+if(condition) {
+  Code if condition true
+}
+else {
+  Code if condition false
+}
+Example :
+if(x > 10) {
+  alert("True")
+}
+else {
+  alert("false")
+}
+let x = 5
+Output -> false
+
+let x = 15
+Output -> True
+
+*/
+
+/* Switch statement : Takes single value as input, searches choices till one matches input, 
+executes corresponding code.
+Basic syntax :
+switch(expression) {
+  case '1' :
+  code to execute if expression matches case 1
+  break;
+
+  case '2' :
+  code to execute if expression matches case 2
+  break;
+
+  default :
+  executed if expression doesn't match any case
+}
+*/
+
+/*
+Ternary/Conditional operator : ?
+Tests condition, returns one value if condition true, another if condition false.
+
+Syntax :
+(condition) ? Code if true : Code if false
+*/
+
+/*
+'update' method -> Updates content in the element with argument entered.
+Syntax : element.update("newContent")
+*/
+
+
+/* let Name = prompt("Please enter your name")
+if(Name == "Admin") {
+  let pass = prompt("Password?")
+   
+   if(pass == "TheMaster"){
+   alert("Welcome")
+   }
+   else if(pass == "" || pass == null) {
+     alert("cancelled")
+   }
+   else{
+     alert("Wrong")
+   }
+
+}
+
+else if(Name == "Jacc") {
+  let pass = prompt("Password?")
+
+  if(pass == "1708") {
+    alert("Welcome")
+  }
+  else if(pass == "" || pass == null) {
+    alert("cancelled")
+  }
+  else {
+    alert("Wrong")
+  }
+}
+
+else if(Name == "Crooo420") {
+  let pass = prompt("Password?")
+
+  if(pass == "2912") {
+    alert("Welcome")
+  }
+  else if(pass == "" || pass == null) {
+    alert("cancelled")
+  }
+  else {
+    alert("Wrong")
+  }
+}
+
+else if(Name == "Nush") {
+  let pass = prompt("Password?")
+
+  if(pass == "1303") {
+    alert("Welcome")
+  }
+  else if(pass == "" || pass == null) {
+    alert("cancelled")
+  }
+  else {
+    alert("Wrong")
+  }
+}
+
+else if(Name == "" || Name == null){
+  alert("cancelled")
+}
+
+else {
+  alert("Stranger")
+}
+*/
+
+/*
+let login = prompt("Enter login details")
+
+let message = (login == "Employee") ?  "Hello" : 
+(login == "Director") ? "Greetings" : 
+(login == "") ?  "No Login" :
+"" ;
+alert(message)
+*/
+
+/*
+Escaping characters in string : "\" before character 
+Ex : str1 = 'I\'m okay'
+*/
+
+// Number to String : Wrap in quotes, '250'
+
+/*
+Number(var) converts any var type to a number, if possible
+Ex.
+str2 = "250"
+num2 = Number(str2)
+console.log(typeof num2) -> number
+
+var.toString() converts any variable to string
+Ex.
+num2 = 250
+str2 = num2.toString()
+console.log(typeof str2) -> String
+*/
+
+/* Template literal placeholder : ${ }
+examScore = 50
+maxScore = 70
+examReport = `You scored ${examScore}/${maxScore}`
+console.log(examReport)
+
+Template literals include code linebreaks
+*/
+
+/*
+Convert string to array using x.split("y") x is variable, y is separator
+
+*/
+
+
+
+
+  </script>
+</body>
+</html>
+

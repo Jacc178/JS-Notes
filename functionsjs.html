@@ -1,0 +1,219 @@
+<html>
+
+<head>
+    <title>Page 2</title>
+    <meta charset="UTF-8" />
+</head>
+
+<script>
+
+   
+    
+        /*
+        Define function :
+        function x() {
+            "code executed when function is called"
+        }
+        x -> Function name
+
+        Call function :
+        x()
+        */
+
+        /*
+        Anonymous function : Used with event handlers (eg. buttons)
+        Syntax : 
+        function() {
+            "code"
+        }
+
+        Can be assigned to variable
+        Eg.
+        myFunc = function() {
+            code
+        }
+
+        Call function :
+        myFunc()
+        */
+
+        /*
+        Parameter : Value specified inside function parentheses for it to function properly
+        Eg. string.replace('x', 'y')
+        */
+
+        /*
+        Scope :
+        Values defined in functions only accessible when function called or from inside function
+        Global scope values are defined outside any function, accessible from anywhere in code
+
+        Example:
+        let x = 1
+
+        function a() {
+            let y = 2
+        }
+
+        function b() {
+            let z = 3
+        }
+
+        function output(value) {
+            const para = document.createElement('p')
+            document.body.appendChild(para);
+            para.textContent = 'Value: ' + value;
+        }
+
+        x accessible from anywhere
+        y,z accessible only when accessed from inside function, ie. output function called
+        inside function a() and b()
+        */
+
+        /*
+        Complex functions broken down into multiple sub functions
+        Eg.
+
+        function mainFunc() {
+            funcValue = x
+
+            subFunc1(funcValue)
+            subFunc2(funcValue)
+            subFunc3(funcValue)
+        }
+
+        function subFunc1(x) {
+            console.log(x)
+        }
+
+        function subFunc2(x) {
+            console.log(x)
+        }
+        */
+</script>
+
+<!-- JS script to return square, cube and factorial of input
+        <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+    </style>
+
+<input class="numberInput" type="text">
+  <p></p>
+
+  <script>
+    input = document.querySelector('.numberInput');
+    para = document.querySelector('p');
+
+    function squared(num) {
+        return num * num
+    }
+
+    function cubed(num) {
+        return num * num * num
+    }
+
+    function factorial(num) {
+        if (num < 0) return undefined
+
+        if (num == 0) return 1
+
+        let x = num - 1
+        while(x > 1) {
+            num *= x
+            x--
+        }
+        return num
+    }
+
+    input.onchange = function() {
+  const num = input.value;
+  if (isNaN(num)) {
+    para.textContent = 'You need to enter a number!';
+  } else {
+    para.textContent = num + ' squared is ' + squared(num) + '. ' + 
+                       num + ' cubed is ' + cubed(num) + '. ' + 
+                       num + ' factorial is ' + factorial(num) + '.';
+  }
+}
+
+  </script>
+-->
+<script>
+/*
+Global Variable: Defined outside any function, accessible from anywhere
+Local Variable: Defined inside a function, only accessible from within function
+If a global and local variable have the same name, function uses value of local variable
+Mostly local variables used
+*/
+
+/*
+Default value for a parameter is used if argument for that parameter is not provided when function is called
+Default value may be set to call another function, used if argument not provided for parameter when function is called
+Default value assigned in two ways:
+1. During declaration :
+function f1(par1, par2 = "Default Value") {
+
+}
+
+2. Inside function:
+function f2(par1, par2) {
+    if (par2 === undefined) {
+        par2 = "Default Value"
+    }
+}
+
+or 
+
+function f2(par1, par2) {
+    text = text || "Default Value"
+}
+
+or 
+function f3(par1, par2) {
+    par2 ?? "Default Value" 
+}
+
+?? : Nullish coalescing operator
+a ?? b
+If a is defined (not null or undefined), returns a
+Else returns b
+*/
+
+
+/*when function reaches return, function stops, value is returned as output
+Eg. 
+function prod(a, b) {
+    return a*b
+}
+
+alert(prod(3, 4))
+
+return can be used multiple times per function
+
+if used without a value, return stops function execution, function returns undefined
+
+wrap in () to specify return value over multiple lines in code 
+return (
+...
+...
+)
+
+
+*/
+
+
+
+
+
+</script>
+
+
+
+
+
+    
+</body>
+
+</html>
